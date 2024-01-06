@@ -1,0 +1,429 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Inter, sans-serif;
+}
+.container{
+    height:100%;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+}
+/* ----------Navbar---------- */
+.navbar{
+    height:100px;
+    width: 100%;
+    border-bottom: white;
+    background-color: #1d2f3e;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    font-family:Inter, sans-serif;
+    list-style: none;
+}
+.navbar ul li{
+    font-family:Inter, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size:23px;
+    font-family:Inter, sans-serif;
+    padding-top: 35px;
+}
+.navbar ul li:hover a{
+    
+    border-radius: 5px;
+    color: #b1caa8;
+}
+.navbar a .search:hover{
+    border-radius: 5px;
+    background-color: #b1caa8;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding-top: 80px;
+}
+img{
+    height: 60px;
+    width:70px ;
+    padding-bottom:70px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.search{
+    margin-top: -55px;
+    height: 50px;
+    width: 50px;
+    background-image: url(images/search\ \(2\).png);
+    background-size: 100% 100%;
+}
+
+/* ---------------banner------------ */
+
+.banner{
+    width:80%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top:55%;
+    transform: translate(-50%,-50% );
+    background-image: url(images/bannerimage.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 15px 5px black ;
+    animation: slider 15s infinite linear;
+    margin: 20px;
+   
+}  
+@keyframes slider{
+    0%{ background-image: url(images/bannerimage.jpg);}
+    25%{background-image: url(images/banner2.jpg);}
+    50%{background-image: url(images/banner5.png);}
+    75%{background-image: url(images/banner6.jpg);}
+}
+ 
+/* --------------feature Events----------- */
+.feature-eventbox{
+    height:87vh;
+    width: 100%;
+    margin-top:100vh;
+    position: relative;
+}
+.feature-eventbox h2{
+color: #202226;
+font-family: 'korolev-condensed';
+padding-left: 45px;
+display: flex;
+padding-top: 10px;
+text-decoration: dotted;
+}
+.eventimg{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.imgbox1{
+    height:300px;
+    width:250px;
+    border-radius:10px ;
+    background-image: url(images/event1.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 10px  black ; 
+}
+.eventimg .imgbox1:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 7px grey;
+}
+.eventimg .imgbox2:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 7px grey;
+}
+.eventimg .imgbox3:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 7px grey;
+}
+.eventimg .imgbox4:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 7px grey;
+}
+.imgbox2{
+    height:300px;
+    width:250px;
+    border-radius: 10px;
+    background-image: url(images/event2.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 10px  black ;
+}
+.imgbox3{
+    height:300px;
+    width:250px;
+    border-radius: 10px;
+    background-image: url(images/event3.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 10px  black ;
+}
+.imgbox4{
+    height:300px;
+    width:250px;
+    border-radius: 10px;
+    background-image: url(images/event4.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 10px  black ;
+}
+.imgbox1 button{
+    float: right;
+    font-size: 13px;
+    padding:5px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color:royalblue;
+    border-radius: 5px;
+    border: none;
+}
+.imgbox2 button{
+    float: right;
+    font-size: 13px;
+    padding:5px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: crimson;
+    border-radius: 5px;
+    border: none;
+}
+.imgbox3 button{
+    float: right;
+    font-size: 13px;
+    padding:5px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: crimson;
+    border-radius: 5px;
+    border: none;
+}
+.imgbox4 button{
+    float: right;
+    font-size: 13px;
+    padding:5px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color:crimson;
+    border-radius: 5px;
+    border: none;
+}
+span{
+    color: white;
+    font-weight: bold;
+}
+.calender{
+    height: 260px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(248, 248, 248);
+}
+.calender1{
+    height: 100px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+}
+.calender2{
+    height: 100px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+}
+.calender3{
+    height: 100px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+}
+.calender4{
+    height: 100px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+}
+.date{
+    
+    font: size 16px;
+    font-weight: bolder;
+    color: #45474D;
+}
+.venue{
+   
+    font: size 16px;
+    font-weight: bolder;
+    color: #45474D;  
+}
+.price{
+   
+    font: size 16px;
+    font-weight: bolder;
+    color: #45474D; 
+}
+.calender button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: royalblue;
+    border: none;
+    color: white;
+}
+.calender .calender1:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 5px grey;
+
+}
+.calender .calender2:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 5px grey;
+}
+.calender .calender3:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 5px grey;
+}
+.calender .calender4:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 5px grey;
+}
+
+/* -------------contact----------- */
+.contactbox{
+    height: 80vh;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    background-color: #b1caa8;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+form h3{
+    color: #555;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form input, form textarea{
+    border: 0px;
+    margin: 10px 0;
+    padding: 15px;
+    outline: none;
+    background-color: #f5f5f5;
+    font-size: 16px;
+}
+form button{
+    padding: 15px;
+    background-color:#ff5361;
+color: #fff;
+font-size: 18px;
+border: 0;
+outline: none;
+cursor: pointer;
+width: 150px;
+margin: 20px auto 0;
+border-radius: 30px;
+}
+
+/* --------------contentbox------------- */
+.contentbox{
+    width: 80%;
+    height: 375px;
+    display: flex ;
+    padding: 60px;
+    border-radius: 15px;
+    background-color: #1d2f3e;
+    margin-left:10%;
+    overflow: hidden;
+}
+.contentbox body{
+    background-color: rgb(248, 248, 248);
+}
+.leftbox{
+    height: 255px;
+    width:600px;
+
+}
+.leftbox h3{
+    font-family: 'korolev-condensed, sans-serif';
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    padding-left: 40px;
+    padding-top: 20px;
+    letter-spacing: 3px;
+}
+.playstore{
+    width: 140px;
+    height:50px;
+    margin-left: 40px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-image: url(images/google-play-badge.svg);
+    background-size: 100% 100%;
+}
+.rightbox{
+    height: 255px;
+    width: 255px;
+    background-image: url(/images/findvibe.png);
+    background-size: 100% 100%;
+}
+/* ----------------------footer----------------------- */
+.fotter{
+    width: 100%;
+    height: 370px;
+    background-color:#1d2f3e ;
+    margin-top: 30px;
+}
+.footerlogo{
+    width: 130px;
+    height: 33px;
+    background-image: url(images/logo.png);
+    background-size: 100% 100%;
+    margin-left:90px;
+    padding-top:50px;
+    margin-top: 100px;
+}
+.eventheading{
+        color: white;
+        font-size: 21px;
+        font-family:' korolev-condensed,sans-serif';
+        font-weight: 700;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-left: 90px;
+        margin-top: 30px;
+}
+.socialmedia{
+    display: flex;
+}
+.fb{
+    height: 39px;
+    width: 39px;
+    background-image: url(images/facebook-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+.twitter{
+    height: 41px;
+    width: 41px;
+    background-image: url(images/twitter-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+.insta{
+    height: 41px;
+    width: 45px;
+    background-image: url(images/instagram-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}

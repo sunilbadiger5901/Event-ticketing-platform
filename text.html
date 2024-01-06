@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="workshop"> All Workshops (174)</h1>
+    <div id="myDIV">
+        <h5>Time:</h5>
+        <button class="text active">ALL</button>
+        <button class="text">Today</button>
+        <button class="text">Tomorrow</button>
+        <button class="text">Weekend</button>
+    </div>
+    <div id="myDIV2">
+        <h5>Genre:</h5>
+        <button class="text active"> Courses(55)</button>
+        <button class="text"> Workshop(4)</button>
+        <button class="text"> Music(23)</button>
+    </div>
+    <div>
+        <h5>Sort:</h5>
+        <select name="sort" id="sort">
+            <option value="Popurality">Popurality</option>
+            <option value="Price">Price</option>
+            <option value="Date">Date</option>
+        </select>
+    </div>
+
+    <script>
+        let header = document.getElementById("myDIV");
+        let btns = header.getElementsByClassName("text");
+
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+        let header2 = document.getElementById("myDIV2");
+        let btns2 = header2.getElementsByClassName("text");
+
+        for (let i = 0; i < btns2.length; i++) {
+            btns2[i].addEventListener("click", function () {
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+</body>
+
+</html>

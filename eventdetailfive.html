@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventdetailfive</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+         <li><a href="Event.html">
+          <img src="/images/logo.png" alt="" 
+          style="height:110px;width:140px;
+          ">
+         </a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="eventspage.html">Events</a></li>
+         <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Signup</a></li>
+          <a href="search.html"><div class="search"></div></a>
+        </ul>
+      </div>
+      <div class="content5">
+        <div class="image5"></div>
+        <div class="details5">
+            <h2>Master class on System Trading <br> With Abhishek Bansal</h2>
+            <button id="btn" onclick="toggle()"></button>
+            <p style="margin: 15px 25px;  font-size: 16px; font-weight: 500;">Workshop</p>
+            <p style="margin: 15px 25px;  font-size: 16px; font-weight: 500;">25 August | 7 PM </p>
+            <p style="margin: 15px 25px;  font-size: 16px; font-weight: 500;">Online</p>
+           <p style="margin:20px 30px;  font-size: 20px; font-weight:bold;">
+            <span>₹</span>
+            0.00
+           </p>
+           <a href="book5.html"><button style="padding: 10px; margin-left: 60px;  border: none; border-radius: 5px; cursor: pointer;background-color: #ec1066; color: white;
+           font-weight: bold;">BUY NOW</button></a>
+        </div>
+      </div>
+      <div class="about">
+        <h2 style="padding: 20px 190px;text-decoration: underline;">About</h2>
+        <p style="margin-left:90px;font-size: 16px; padding: 5px;">
+            Join the "Masterclass on System Trading with Abhishek Bansal" to embark on a transformative journey into the world of stock trading. In this class, you will dive deep into the fundamentals of stock trading, starting with a clear understanding of the concepts and terminologies used in the field. Led by Abhishek Bansal, an experienced trader, this masterclass provides a comprehensive framework for approaching System Trading
+        </p>
+      </div>
+      <div class="contentbox">
+        <div class="leftbox">
+            <h3>HIT PAUSE ON BOREDOM</h3>
+            <p style="font-size: 16px; margin-top: 30px; padding-left: 40px; color: white; 
+            letter-spacing: 2px;">
+                Kickstart your resolution to party hard. Experience <br> LIVE music, comedy, poetry, theatre, sports <br> & so much more…
+            </p>
+            <p style="font-size: 13px; margin-top: 9px; padding-left:40px; color: white;
+            letter-spacing: 2px;">
+                Watch and cheer for your favourite teams, Discover new <br> hobbies with workshops & courses And Groove to the beats <br> of your favourite artists.
+            </p>
+            <a href="https://play.google.com/"><div class="playstore"></div></a>
+        </div>
+        <div class="rightbox"></div>
+     </div>
+
+     <div class="fotter">
+        <div class="footerlogo" style="margin-top: 40px; margin-left: 200px;"></div>
+        <p style="font-size: 16px ; color: white; margin-top: 25px;margin-left:90px;">
+            MyTicket is a platform that helps you discover and buy the best in events, travel and food in your city. We strive to curate experiences that are worth your time and money,<br> possibly something you have never tried before.
+        </p>
+        <h5 class="eventheading" style="margin-left:90px;">
+            For event organizers
+        </h5>
+        <p style="font-size: 16px ;  color: white; margin-top: 25px;
+        margin-left:90px;">
+         MyTicket is built by the same team that created Bacardi NH7 Weekender
+        </p>
+        <div class="socialmedia">
+            <p style="font-size: 18px ; margin-left:90px; color: white; margin-top: 110px;">Find us on:</p>
+            <a href="https://www.facebook.com/">
+                <div class="fb" style="color: white;"></div></a>
+            <a href="https://twitter.com/i/flow/login?lang=en"><div class="twitter"></div></a>
+            <a href="https://www.instagram.com/"><div class="insta"></div></a>
+        </div>
+     </div>
+</body>
+<script>
+
+var btn = document.getElementById("btn");
+flag = 0
+    function toggle(){
+        if(flag == 0){
+            btn.style.backgroundColor = "#be2525"
+            
+            flag = 1
+        } else{
+            btn.style.backgroundColor = "transparent"
+            flag = 0
+        }
+        
+    }
+</script>
+</html>
+
+<style>
+       *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Inter, sans-serif;
+}
+#btn{
+    padding: 5px;
+    margin-left:20px;
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    background-image: url(images/like-removebg-preview.png);
+    background-size: 100% 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+  
+}
+
+        .navbar{
+    height:100px;
+    width: 100%;
+    border-bottom: white;
+    background-color: #1d2f3e;
+   
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    font-family:Inter, sans-serif;
+    list-style: none;
+}
+.navbar ul li{
+    font-family:Inter, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size:23px;
+    font-family:Inter, sans-serif;
+    padding-top: 35px;
+}
+.navbar ul li:hover a{
+    
+    border-radius: 5px;
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding-top: 80px;
+}
+img{
+    height: 60px;
+    width:70px ;
+    padding-bottom:70px;
+}
+i{
+    padding-left: 25%;
+}
+.search{
+    margin-top: -55px;
+    height: 50px;
+    width: 50px;
+    background-image: url(images/search\ \(2\).png);
+    background-size: 100% 100%;
+}
+.content5{
+    display: flex;
+    margin:30px 0px;
+    height:350px;
+    width: 100%;
+    position: relative;
+}
+.image5{
+    height:100%;
+    width: 580px;
+    background-image:url(images/free1.jpg);
+    background-size: 100% 100%;
+    border-radius: 7px;
+     margin-left:15%; 
+    position: absolute;
+}
+ .details5{
+    height: 100%;
+    width:30%;
+    border: 1px solid rgb(225, 227, 230);
+    border-radius: 10px;
+    position: absolute;
+margin-left:65%;
+} 
+.details5 h2{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.about{
+    height:40vh;
+    width: 100%;
+    margin-top: 30px;
+}
+.contentbox{
+    width: 80%;
+    height: 375px;
+    display: flex ;
+    padding: 60px;
+    border-radius: 15px;
+    background-color: #1d2f3e;
+    margin-left:10%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.leftbox{
+    height: 255px;
+    width:600px;
+
+}
+.leftbox h3{
+    font-family: 'korolev-condensed, sans-serif';
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    padding-left: 40px;
+    padding-top: 20px;
+    letter-spacing: 3px;
+}
+.playstore{
+    width: 140px;
+    height:50px;
+    margin-left: 40px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-image: url(images/google-play-badge.svg);
+    background-size: 100% 100%;
+}
+.rightbox{
+    height:300px;
+    width: 255px;
+    background-image: url(/images/findvibe.png);
+    background-size: 100% 100%;
+}
+.fotter{
+    width: 100%;
+    height: 370px;
+    background-color:#1d2f3e ;
+    margin-top: 30px;
+}
+.footerlogo{
+    width: 125px;
+    height: 33px;
+    background-image: url(images/logo.png);
+    background-size: 100% 100%;
+    margin-left:150px;
+    padding-top:50px;
+    margin-top: 100px;
+}
+.eventheading{
+        color: white;
+        font-size: 21px;
+        font-family:' korolev-condensed,sans-serif';
+        font-weight: 700;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-top: 30px;
+}
+.socialmedia{
+    display: flex;
+}
+.fb{
+    height: 39px;
+    width: 39px;
+    background-image: url(images/facebook-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+.twitter{
+    height: 41px;
+    width: 41px;
+    background-image: url(images/twitter-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+.insta{
+    height: 41px;
+    width: 45px;
+    background-image: url(images/instagram-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+</style>

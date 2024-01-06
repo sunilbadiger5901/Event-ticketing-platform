@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventticketing</title>
+    <link rel="stylesheet" href="Event.css">
+    <script src="https://kit.fontawesome.com/fef843a56a.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- ----------navigation Bar------------ -->
+        <div class="navbar" id="top">
+          <ul>
+           <li><a href="">
+            <img src="/images/logo.png" alt="" 
+            style="height:110px;width:140px;
+            ">
+           </a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="eventspage.html">Events</a></li>
+           <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <a href="search.html"><div class="search"></div></a>
+          </ul>
+        </div>
+    <!-- -------------Banner---------- -->
+     <div class="banner"></div>
+    <div class="feature-eventbox">
+        
+    <h2>FEATURED EVENTS</h2>
+    <div class="eventimg">
+       <a href="eventdetail0ne.html"> <div class="imgbox1"><button><span>Music</span></button></div> </a>
+        <a href="eventdetailtwo.html"><div class="imgbox2"><button><span>Theatre & Arts</span></button></div></a>
+       <a href="eventdetailthree.html"><div class="imgbox3"><button><span>Health & Wellness</span></button></div></a>
+        <a href="eventdetailfour.html"><div class="imgbox4"><button><span>Courses</span></button></div></a>
+    </div>
+     <div class="calender">
+        <div class="calender1">
+            <div class="date">Date:25 November</div>
+            <div class="venue">Venue:Bengaluru</div>
+            <div class="price">
+                ₹6999 ONWARDS</div>
+                    </div>
+        <div class="calender2">
+            <div class="date">Video on Demand</div>
+            <div class="venue">Watch on MyTickets</div>
+            <div class="price">₹149 </div>
+        </div>
+        <div class="calender3">
+            <div class="date">Video on Demand</div>
+            <div class="venue">Watch on MyTickets</div>
+            <div class="price">₹399 </div>
+        </div>
+        <div class="calender4">
+            <div class="date">Video on Demand</div>
+            <div class="venue">Watch on MyTickets</div>
+            <div class="price">₹1500 </div>
+        </div>
+     </div>
+     <div class="contentbox">
+        <div class="leftbox">
+            <h3>HIT PAUSE ON BOREDOM</h3>
+            <p style="font-size: 16px; margin-top: 30px; padding-left: 40px; color: white; 
+            letter-spacing: 2px;">
+                Kickstart your resolution to party hard. Experience <br> LIVE music, comedy, poetry, theatre, sports <br> & so much more…
+            </p>
+            <p style="font-size: 13px; margin-top: 9px; padding-left:40px; color: white;
+            letter-spacing: 2px;">
+                Watch and cheer for your favourite teams, Discover new <br> hobbies with workshops & courses And Groove to the beats <br> of your favourite artists.
+            </p>
+            <a href="https://play.google.com/"><div class="playstore"></div></a>
+        </div>
+        <div class="rightbox"></div>
+     </div>
+
+     <!-- -------------contact---------------- -->
+     <div>
+        <div class="contactbox">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                 <h3>Get in touch</h3>
+                  <input type="text" id="name" placeholder="your name" required>
+                  <input type="email" id="email" placeholder="Email id" required>
+                  <input type="text" id="phone" placeholder="Phone No" required>
+                  <textarea name="message" id="message"  rows="4" placeholder="how can we help you"></textarea>
+                  <button type="submit">Send</button>
+            </form>
+        </div>
+     </div>
+     <!-- --------------------fotter------------------ -->
+     <div class="footercont">
+     <div class="fotter">
+        <div class="footerlogo" style="margin-top: 40px;"></div>
+        <p style="font-size: 16px ; margin-left: 90px; color: white; margin-top: 25px;">
+            MyTicket is a platform that helps you discover and buy the best in events, travel and food in your city. We strive to curate experiences that are worth your time and money,<br> possibly something you have never tried before.
+        </p>
+        <h5 class="eventheading">
+            For event organizers
+        </h5>
+        <p style="font-size: 16px ; margin-left: 90px; color: white; margin-top: 25px;">
+            Myticket is built by the same team that created Bacardi NH7 Weekender
+        </p>
+        <div class="socialmedia">
+            <p style="font-size: 18px ; margin-left: 90px; color: white; margin-top: 110px;">Find us on:</p>
+            <a href="https://www.facebook.com/">
+                <div class="fb" style="color: white;"></div></a>
+            <a href="https://twitter.com/i/flow/login?lang=en"><div class="twitter"></div></a>
+            <a href="https://www.instagram.com/"><div class="insta"></div></a>
+        </div>
+        <a href=""><div style="color:red; margin-left: 45%; font-weight: bold;">Back to top</div></a>
+     </div>
+    </div>
+    
+</div>
+   
+   
+</body>
+</html>

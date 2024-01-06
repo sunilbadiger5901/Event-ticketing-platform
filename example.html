@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+         <li><a href="Event.html">
+          <img src="/images/logo.png" alt="" 
+          style="height:110px;width:140px;
+          ">
+         </a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="eventspage.html">Events</a></li>
+         <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Signup</a></li>
+          <a href="search.html"><div class="search"></div></a>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+    <div class="card-list-wrapper category-wrapper container">
+        <div class="row">
+            <div id="section1">
+                <div class="col-12 text-center mb-3 d-flex flex-row">
+                    <div class="mr-3">
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-cwtdt8">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.33333 4.75562C5.49238 4.75562 4 6.248 4 8.08895V12.7556C4 14.5966 5.49238 16.0889 7.33333 16.0889H12C13.8409 16.0889 15.3333 14.5966 15.3333 12.7556V8.08895C15.3333 6.248 13.841 4.75562 12 4.75562H7.33333ZM5.33333 8.08895C5.33333 6.98438 6.22876 6.08895 7.33333 6.08895H12C13.1046 6.08895 14 6.98438 14 8.08895V12.7556C14 13.8602 13.1046 14.7556 12 14.7556H7.33333C6.22876 14.7556 5.33333 13.8602 5.33333 12.7556V8.08895Z" fill="#0C172F"></path>
+                            <path d="M5.33333 20.7556C5.33333 19.651 6.22876 18.7556 7.33333 18.7556H11.3333C11.7015 18.7556 12 18.4571 12 18.0889C12 17.7208 11.7015 17.4223 11.3333 17.4223H7.33333C5.49238 17.4223 4 18.9147 4 20.7556V25.4223C4 27.2632 5.49238 28.7556 7.33333 28.7556H12C13.8409 28.7556 15.3333 27.2632 15.3333 25.4223V18.0889C15.3333 17.7208 15.0349 17.4223 14.6667 17.4223C14.2985 17.4223 14 17.7208 14 18.0889V25.4223C14 26.5269 13.1046 27.4223 12 27.4223H7.33333C6.22876 27.4223 5.33333 26.5269 5.33333 25.4223V20.7556Z" fill="#0C172F"></path>
+                            <path d="M18 15.4223V8.08895C18 6.98438 18.8954 6.08895 20 6.08895L24.6667 6.08895C25.7712 6.08895 26.6667 6.98438 26.6667 8.08895V12.7556C26.6667 13.8602 25.7712 14.7556 24.6667 14.7556H20.6667C20.2985 14.7556 20 15.0541 20 15.4223C20 15.7905 20.2985 16.0889 20.6667 16.0889H24.6667C26.5076 16.0889 28 14.5966 28 12.7556V8.08895C28 6.248 26.5076 4.75562 24.6667 4.75562H20C18.1591 4.75562 16.6667 6.248 16.6667 8.08895V15.4223C16.6667 15.7905 16.9651 16.0889 17.3333 16.0889C17.7015 16.0889 18 15.7905 18 15.4223Z" fill="#0C172F"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 17.4223C18.1591 17.4223 16.6667 18.9147 16.6667 20.7556V25.4223C16.6667 27.2632 18.1591 28.7556 20 28.7556H24.6667C26.5076 28.7556 28 27.2632 28 25.4223V20.7556C28 18.9147 26.5076 17.4223 24.6667 17.4223H20ZM18 20.7556C18 19.651 18.8954 18.7556 20 18.7556H24.6667C25.7712 18.7556 26.6667 19.651 26.6667 20.7556V25.4223C26.6667 26.5269 25.7712 27.4223 24.6667 27.4223H20C18.8954 27.4223 18 26.5269 18 25.4223V20.7556Z" fill="#0C172F"></path>
+                        </svg>
+                    </div>
+                    <h1 style="font-size:25px;">
+                        Browse events by genre
+                    </h1>
+                </div>
+
+                <ul class="col-12 card-list">
+                    <li class="category-list-item d-flex flex-row justify-content-center" onclick="display('section2')">
+                        <a href="#section2" class="box-a" id="navigatePage">
+                            <div>
+                                <figure>
+                                    <picture>
+                                        <img data-testid="ad-banner-image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1634729595%2Fwqznop375nmlmttljqfy.png" alt="Workshops 174 events" srcset="">
+                                    </picture>
+                                </figure>
+                                <div class="css-1fv8emw">
+                                    <span class="css-17bf5g1">Workshops</span>
+                                    <span class="css-1u97zi8">174 events</span>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </li>
+                    <li class="category-list-item d-flex flex-row justify-content-center ">
+                        <a href="/courses-in-online" class="box-a">
+                            <div>
+                                <figure>
+                                    <picture>
+                                        <img data-testid="ad-banner-image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1634728594%2Ffmp33llb6xv1fwgf6uws.png" alt="Courses 66 events" srcset="">
+                                    </picture>
+                                </figure>
+                                <div class="css-1fv8emw">
+                                    <span class="css-17bf5g1">Courses</span>
+                                    <span class="css-1u97zi8">66 events</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="category-list-item d-flex flex-row justify-content-center">
+                        <a href="/theatre-%26-arts-in-online" class="box-a">
+                            <div class="css-1mpukgo">
+                                <figure class="css-39a2yz">
+                                    <picture><img data-testid="ad-banner-image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1634729369%2Fowpjhi6cboyqkajbtsdy.png" alt="Theatre &amp; Arts 35 events" srcset=""></picture>
+                                </figure>
+                                <div class="css-1fv8emw">
+                                    <span class="css-17bf5g1">Theatre &amp; Arts</span>
+                                    <span class="css-1u97zi8">35 events</span>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="category-list-item d-flex flex-row justify-content-center">
+                        <a href="/games-%26-quizzes-in-online" class="box-a">
+                            <div class="css-1mpukgo">
+                                <figure class="css-39a2yz">
+                                    <picture><img data-testid="ad-banner-image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1634730979%2Fzyxgseefk93mvgsk44l6.png" alt="Games &amp; Quizzes 27 events" srcset=""></picture>
+                                </figure>
+                                <div class="css-1fv8emw">
+                                    <span class="css-17bf5g1">Games &amp; Quizzes</span>
+                                    <span class="css-1u97zi8">27 events</span>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="category-list-item d-flex flex-row justify-content-center">
+                        <a href="/health-%26-wellness-in-online" class="box-a">
+                            <div class="css-1mpukgo">
+                                <figure class="css-39a2yz">
+                                    <picture><img data-testid="ad-banner-image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1634728929%2Flydoux72oktn1z3cnje6.png" alt="Health &amp; Wellness 25 events" srcset=""></picture>
+                                </figure>
+                                <div class="css-1fv8emw">
+                                    <span class="css-17bf5g1">Health &amp; Wellness</span>
+                                    <span class="css-1u97zi8">25 events</span>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="category-list-item d-flex flex-row justify-content-center">
+                        <a href="/kids-in-online" class="box-a">
+                            <div class="css-1mpukgo">
+                                <figure class="css-39a2yz">
+                                    <picture><img data-testid="ad-banner-image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1634728967%2Fy62bj8dfortszhdfbq9e.png" alt="Kids 13 events" srcset=""></picture>
+                                </figure>
+                                <div class="css-1fv8emw">
+                                    <span class="css-17bf5g1">Kids</span>
+                                    <span class="css-1u97zi8">13 events</span>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="category-list-item d-flex flex-row justify-content-center">
+                        <a href="/talks-in-online" class="box-a">
+                            <div class="css-1mpukgo">
+                                <figure class="css-39a2yz">
+                                    <picture><img data-testid="ad-banner-image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1634729244%2Fyiqva2gcq8yukgxobuug.png" alt="Talks 10 events" srcset=""></picture>
+                                </figure>
+                                <div class="css-1fv8emw">
+                                    <span class="css-17bf5g1">Talks</span>
+                                    <span class="css-1u97zi8">10 events</span>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="category-list-item d-flex flex-row justify-content-center">
+                        <a href="/music-in-online" class="box-a">
+                            <div class="css-1mpukgo">
+                                <figure class="css-39a2yz">
+                                    <picture><img data-testid="ad-banner-image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1634730202%2Fh1xu8qybujyyyo0e7pb8.png" alt="Music 8 events" srcset=""></picture>
+                                </figure>
+                                <div class="css-1fv8emw">
+                                    <span class="css-17bf5g1">Music</span>
+                                    <span class="css-1u97zi8">8 events</span>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id="section2" class="col-12 d-none">
+                <div>
+                    <h1><span style="color: rgb(0, 185, 245);font-weight: 700;">All Workshops</span>(174)</h1>
+                </div>
+                <div class="d-flex flex-row">
+                    <p>TIME:</p>
+                    <ul class="d-flex flex-row">
+                        <li class="css-1vw466x active">Today</li>
+                        <li class="css-1vw466x">Tomorrow</li>
+                        <li class="css-1vw466x">Weekend</li>
+                    </ul>
+                </div>
+                <div class="d-flex flex-row">
+                    <p>GENRE:</p>
+                    <ul class="d-flex flex-row">
+                        <li class="css-1vw466x active">Workshops(174)</li>
+                        <li class="css-1vw466x">Courses(69)</li>
+                        <li class="css-1vw466x ">Theatre & Arts(35)</li>
+                        <li class="css-1vw466x ">Games & Quizzes(27)</li>
+                        <li class="css-1vw466x ">Health & Wellness(25)</li>
+                    </ul>
+                </div>
+                <div class="d-flex flex-row">
+                    <p>SHORT:</p>
+                    <ul class="d-flex flex-row">
+                        <li class="css-1vw466x active">Popularity</li>
+                        <li class="css-1vw466x">Price</li>
+                        <li class="css-1vw466x ">Date</li>
+                    </ul>
+                </div>
+                <a class="col-12 col-md-6" href="/learn-ms-excel-basics-to-advance-master-class-may31-2023/event">
+                    <div id="event_image" class="css-pb8e9y ">
+                        <img data-testid="ad-banner-image" data-ref="event_card_image" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_400/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1685496897%2Fhvifo6us5gnyb6lo3zgh.png" alt="Learn MS Excel - Basics To Advance - Master Class" srcset="" class="thumbnail">
+                        <span class="card-genre css-mrmzh" style="background-color: rgb(236, 16, 102);">Workshops</span>
+                    </div>
+                    <div class="d-flex flex-column p-3">
+                        <div>
+                            <h6>
+                                Learn MS Excel - Basics To Advance - Master Class
+                            </h6>
+                            <div class="d-flex flex-row" style="margin-top: 0px;">
+                                <div>
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 5.5L6.5 5.5V5C6.5 4.17157 7.17157 3.5 8 3.5C8.82843 3.5 9.5 4.17157 9.5 5V5.5L12.5 5.5V5C12.5 4.17157 13.1716 3.5 14 3.5C14.8284 3.5 15.5 4.17157 15.5 5V5.5H16.5C17.8807 5.5 19 6.61929 19 8V10.6429C19 10.919 18.7761 11.1429 18.5 11.1429C18.2239 11.1429 18 10.919 18 10.6429V10.5H4L4 17C4 17.8284 4.67157 18.5 5.5 18.5L9.5 18.5C9.77614 18.5 10 18.7239 10 19C10 19.2761 9.77614 19.5 9.5 19.5H5.5C4.11929 19.5 3 18.3807 3 17V8C3 6.61929 4.11929 5.5 5.5 5.5ZM7.5 5V7C7.5 7.27614 7.72386 7.5 8 7.5C8.27614 7.5 8.5 7.27614 8.5 7V5C8.5 4.72386 8.27614 4.5 8 4.5C7.72386 4.5 7.5 4.72386 7.5 5ZM14.5 5C14.5 4.72386 14.2761 4.5 14 4.5C13.7239 4.5 13.5 4.72386 13.5 5V7C13.5 7.27614 13.7239 7.5 14 7.5C14.2761 7.5 14.5 7.27614 14.5 7V5ZM12.5 6.5V7C12.5 7.82843 13.1716 8.5 14 8.5C14.8284 8.5 15.5 7.82843 15.5 7V6.5L16.5 6.5C17.3284 6.5 18 7.17157 18 8V9.5H4L4 8C4 7.17157 4.67157 6.5 5.5 6.5H6.5V7C6.5 7.82843 7.17157 8.5 8 8.5C8.82843 8.5 9.5 7.82843 9.5 7V6.5L12.5 6.5Z" fill="#45474D">
+
+                                        </path>
+                                        <path d="M16 17C15.7239 17 15.5 16.7761 15.5 16.5V14C15.5 13.7239 15.7239 13.5 16 13.5C16.2761 13.5 16.5 13.7239 16.5 14V16H17.5C17.7761 16 18 16.2239 18 16.5C18 16.7761 17.7761 17 17.5 17H16Z" fill="#45474D">
+
+                                        </path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21.5C18.7614 21.5 21 19.2614 21 16.5C21 13.7386 18.7614 11.5 16 11.5C13.2386 11.5 11 13.7386 11 16.5C11 19.2614 13.2386 21.5 16 21.5ZM16 20.5C18.2091 20.5 20 18.7091 20 16.5C20 14.2909 18.2091 12.5 16 12.5C13.7909 12.5 12 14.2909 12 16.5C12 18.7091 13.7909 20.5 16 20.5Z" fill="#45474D"></path>
+                                    </svg>
+                                </div>
+                                <p class="css-18ebd1c">
+                                    August 2 | 4PM - August 6 | 8PM
+                                </p>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2047 13.0311C16.6251 12.7846 16.6251 12.1739 16.2047 11.9274L10.4757 8.56725C10.052 8.31878 9.52002 8.62602 9.52002 9.11914V15.8394C9.52002 16.3325 10.052 16.6397 10.4757 16.3913L16.2047 13.0311ZM10.52 9.75255L15.1691 12.4792L10.52 15.2059V9.75255Z" fill="#45474D"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52002 12.4792C3.52002 7.50869 7.54946 3.47925 12.52 3.47925C17.4906 3.47925 21.52 7.50868 21.52 12.4792C21.52 17.4498 17.4906 21.4792 12.52 21.4792C7.54946 21.4792 3.52002 17.4498 3.52002 12.4792ZM4.52002 12.4792C4.52002 8.06097 8.10174 4.47925 12.52 4.47925C16.9383 4.47925 20.52 8.06097 20.52 12.4792C20.52 16.8975 16.9383 20.4792 12.52 20.4792C8.10174 20.4792 4.52002 16.8975 4.52002 12.4792Z" fill="#45474D"></path>
+                                    </svg>
+                                </div>
+                                <p class="css-18ebd1c">
+                                    Online
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row bey-now">
+                            <p class="css-1sh8h77">₹0 onwards</p>
+                            <p class="css-y4o4bv">Buy now</p>
+                        </div>
+                    </div>
+                </a>
+                <button class="btn btn-primary" onclick="display('section1')">Back</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+<script>
+    let listButton = document.getElementById("navigatePage");
+let sectionEl = document.getElementById("section2");
+
+listButton.onclick = function() {
+    sectionEl.classList.remove("d-none");
+}
+</script>
+
+</html>
+
+<style>
+       *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Inter, sans-serif;
+}
+           .navbar{
+    height:100px;
+    width: 100%;
+    border-bottom: white;
+    background-color: #1d2f3e;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    font-family:Inter, sans-serif;
+    list-style: none;
+}
+.navbar ul li{
+    font-family:Inter, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size:23px;
+    font-family:Inter, sans-serif;
+    padding-top: 35px;
+}
+.navbar ul li:hover a{
+    
+    border-radius: 5px;
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding-top: 80px;
+}
+img{
+    height: 60px;
+    width:70px ;
+    padding-bottom:70px;
+}
+i{
+    padding-left: 25%;
+}
+.search{
+    margin-top: -55px;
+    height: 50px;
+    width: 50px;
+    background-image: url(images/search\ \(2\).png);
+    background-size: 100% 100%;
+}
+
+.card-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category-list-item {
+    width: 78px;
+    min-width: 21%;
+    height: auto;
+    margin: 7px;
+}
+
+.box-a {
+    width: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 9px;
+    height: 78px;
+    width: 78px;
+}
+
+img {
+    height: 70px;
+    width: 70px;
+}
+
+.css-1fv8emw span {
+    display: block;
+    text-align: center;
+}
+
+.css-17bf5g1 {
+    margin-top: 12px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.css-1u97zi8 {
+    font-size: 11px;
+    color: rgb(0, 0, 0);
+    opacity: 0.6;
+}
+
+#section2 {
+    width: 100%;
+    background: white;
+    position: relative;
+    overflow: visible;
+    white-space: normal;
+    border-radius: 12px;
+    border: 1px solid #f0f1f2;
+
+}
+
+.css-pb8e9y {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: #eee;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 2px solid red;
+    width: 400px;
+    height: 219px;
+}
+
+.css-mrmzh {
+    font-size: 11px;
+    position: absolute;
+    top: calc(16px / 2);
+    right: calc(16px / 2);
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #c20000;
+    border-radius: 6px;
+    font-weight: 700;
+    padding: calc(12px / 2) calc(16px / 2);
+}
+
+.thumbnail {
+    width: 400px;
+    height: 219px;
+}
+
+.css-1gd5o6a {
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bey-now {
+    justify-content: space-between;
+    border-radius: 9px;
+    background: #FEF3F7;
+    padding: 4px;
+}
+
+ul {
+    list-style-type: none;
+    overflow-y: auto;
+
+}
+
+.css-1vw466x.active {
+    color: rgb(255, 255, 255);
+    background: rgb(194, 0, 0);
+    font-weight: 400;
+    border-color: rgb(194, 0, 0);
+}
+
+.css-1vw466x {
+    display: block;
+    height: 30px;
+
+    padding: 3px 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 50px;
+    font-weight: 400;
+    margin-right: 12px;
+}
+</style>

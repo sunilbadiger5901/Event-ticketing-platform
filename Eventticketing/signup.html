@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+    <div class="navbar" id="top">
+        <ul>
+         <li><a href="">
+          <img src="/images/logo.png" alt="" 
+          style="height:110px;width:140px;
+          ">
+         </a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="">Events</a></li>
+         <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Signup</a></li>
+          <a href="search.html"><div class="search"></div></a>
+        </ul>
+      </div>
+      <section>
+        <div class="login-box">
+            <form action="">
+                <h2>SignIn</h2>
+                <div class="input-box">
+                  <span class="icon">
+                    <ion-icon name="person"></ion-icon>
+                  </span>
+                  <input type="text" required>
+                  <label for="text">Firstname</label>
+              </div>
+              <div class="input-box">
+                <span class="icon">
+                  <ion-icon name="person-add"></ion-icon>
+                </span>
+                <input type="text" required>
+                <label for="text">Lastname</label>
+            </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label for="Email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label for="Password">Password</label>
+                </div>
+                  <button type="submit" onsubmit="submit()">SignIn</button>
+            </form>
+        </div>
+    </section>
+    <div class="fotter">
+        <div class="footerlogo" style="margin-top: 40px;"></div>
+        <p style="font-size: 16px ; margin-left: 90px; color: white; margin-top: 25px;">
+            MyTicket is a platform that helps you discover and buy the best in events, travel and food in your city. We strive to curate experiences that are worth your time and money,<br> possibly something you have never tried before.
+        </p>
+        <h5 class="eventheading">
+            For event organizers
+        </h5>
+        <p style="font-size: 16px ; margin-left: 90px; color: white; margin-top: 25px;">
+            Myticket is built by the same team that created Bacardi NH7 Weekender
+        </p>
+        <div class="socialmedia">
+            <p style="font-size: 18px ; margin-left: 90px; color: white; margin-top: 110px;">Find us on:</p>
+            <a href="https://www.facebook.com/">
+                <div class="fb" style="color: white;"></div></a>
+            <a href="https://twitter.com/i/flow/login?lang=en"><div class="twitter"></div></a>
+            <a href="https://www.instagram.com/"><div class="insta"></div></a>
+        </div>
+        <a href=""><div style="color:red; margin-left: 45%; font-weight: bold;">Back to top</div></a>
+     </div>
+    </div>
+  
+ <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins' sans-serif;
+}
+.navbar{
+    height:100px;
+    width: 100%;
+    border-bottom: white;
+    background-color: #1d2f3e;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    font-family:Inter, sans-serif;
+    list-style: none;
+}
+.navbar ul li{
+    font-family:Inter, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size:23px;
+    font-family:Inter, sans-serif;
+    padding-top: 35px;
+}
+.navbar ul li:hover a{
+    
+    border-radius: 5px;
+    color: #b1caa8;
+}
+.navbar a .search:hover{
+    border-radius: 5px;
+    background-color: #b1caa8;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding-top: 80px;
+}
+img{
+    height: 60px;
+    width:70px ;
+    padding-bottom:70px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.search{
+    margin-top: -55px;
+    height: 50px;
+    width: 50px;
+    background-image: url(images/search\ \(2\).png);
+    background-size: 100% 100%;
+}
+
+
+section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url(images/bg.jpg);
+        background-size: cover;
+        background-position: center;
+        margin-top: 40px;
+        margin-bottom: -40px;
+      }
+      .login-box{
+      position: relative;
+      width: 400px;
+      height: 490px;
+      background-color: transparent;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, .5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter:blur(15px);
+      }
+       h2{
+        font-size: 2em;
+        color: #fff;
+        text-align: center;
+      }
+      .input-box{
+        width: 310px;
+        margin: 30px 0;
+         border-bottom: 2px solid #fff;
+        position: relative; 
+      } 
+       .input-box label{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 1em;
+        pointer-events: none;
+        color: #fff;
+        transition: .5s;
+      } 
+      .input-box input:focus~label,
+      .input-box input:valid~label{
+        top: .5px;
+      }
+       .input-box input{
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: #fff;
+        padding: 0 35px 0 5px;
+      } 
+       .input-box .icon{
+        position: absolute;
+        right: 8px;
+        color: #fff;
+        font-size: 1.2em;
+        line-height: 57px;
+      } 
+      .remember-forgot{
+        margin: -15px 0 15px;
+        font-size: .9em;
+        color: #fff;
+        
+      }
+      .remember-forgot label input{
+        margin: 3px;
+      }
+      .remember-forgot a{
+        text-decoration: none;
+        color: #fff;
+        margin-left: 70px;
+      }
+      .remember-forgot:hover{
+        text-decoration: underline;
+      }
+      button{
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        color: black;
+        font-size: 1em;
+        border-radius: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .register-link{
+        font-size: .9em;
+        color: #fff;
+        text-align: center;
+        margin: 25px 0 10px;
+      }
+      .register-link p a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+      }
+      .register-link p a :hover{
+        text-decoration: underline;
+      }
+      .fotter{
+    width: 100%;
+    height: 370px;
+    background-color:#1d2f3e ;
+   
+}
+.footerlogo{
+    width: 125px;
+    height: 33px;
+    background-image: url(images/logo.png);
+    background-size: 100% 100%;
+    margin-left:90px;
+    padding-top:50px;
+    margin-top: 100px;
+}
+.eventheading{
+        color: white;
+        font-size: 21px;
+        font-family:' korolev-condensed,sans-serif';
+        font-weight: 700;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-left: 90px;
+        margin-top: 30px;
+}
+.socialmedia{
+    display: flex;
+}
+.fb{
+    height: 39px;
+    width: 39px;
+    background-image: url(images/facebook-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+.twitter{
+    height: 41px;
+    width: 41px;
+    background-image: url(images/twitter-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+.insta{
+    height: 41px;
+    width: 45px;
+    background-image: url(images/instagram-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+ </style>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+ <script type="javascript/text">
+  function submit()
+  {
+    alert("submitted Successfully");
+  }
+ </script>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+</head>
+<body>
+    <div class="navbar" id="top">
+        <ul>
+         <li><a href="">
+          <img src="/images/logo.png" alt="" 
+          style="height:110px;width:140px;
+          ">
+         </a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="eventspage.html">Events</a></li>
+         <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Signup</a></li>
+          <a href="search.html"><div class="search"></div></a>
+        </ul>
+      </div>
+
+      <h1>Event Listings</h1>
+    
+      <!-- Filtering Form -->
+      <form id="filter-form">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location">
+  
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date">
+  
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+              <option value="music">Music</option>
+              <option value="courses">Movie</option>
+              <option value="Theatre">Theatre</option>
+          </select>
+  
+          <button type="submit">Filter</button>
+      </form>
+      
+      <!-- Event Listings Container -->
+      <div id="event-listings"></div>
+      
+      <div class="banner"></div>
+      <div class="feature-eventbox">
+      <h2>FEATURED EVENTS</h2>
+      <div class="eventimg">
+         <a href="eventdetail0ne.html"> <div class="imgbox1"><button><span>Music</span></button></div> </a>
+          <a href="eventdetailtwo.html"><div class="imgbox2"><button><span>Theatre & Arts</span></button></div></a>
+         <a href="eventdetailthree.html"><div class="imgbox3"><button><span>Health & Wellness</span></button></div></a>
+          <a href="eventdetailfour.html"><div class="imgbox4"><button><span>Courses</span></button></div></a>
+      </div>
+
+      <div class="calender">
+        <div class="calender1">
+            <div class="date">Date:25 November</div>
+            <div class="venue">Venue:Bengaluru</div>
+            <div class="price">
+                ₹6999 ONWARDS</div>
+                    </div>
+        <div class="calender2">
+            <div class="date">Video on Demand</div>
+            <div class="venue">Watch on MyTickets</div>
+            <div class="price">₹149 </div>
+        </div>
+        <div class="calender3">
+            <div class="date">Video on Demand</div>
+            <div class="venue">Watch on MyTickets</div>
+            <div class="price">₹399 </div>
+        </div>
+        <div class="calender4">
+            <div class="date">Video on Demand</div>
+            <div class="venue">Watch on MyTickets</div>
+            <div class="price">₹1500 </div>
+        </div>
+     </div>
+     <div class="contentbox">
+        <div class="leftbox">
+            <h3>HIT PAUSE ON BOREDOM</h3>
+            <p style="font-size: 16px; margin-top: 30px; padding-left: 40px; color: white; 
+            letter-spacing: 2px;">
+                Kickstart your resolution to party hard. Experience <br> LIVE music, comedy, poetry, theatre, sports <br> & so much more…
+            </p>
+            <p style="font-size: 13px; margin-top: 9px; padding-left:40px; color: white;
+            letter-spacing: 2px;">
+                Watch and cheer for your favourite teams, Discover new <br> hobbies with workshops & courses And Groove to the beats <br> of your favourite artists.
+            </p>
+            <a href="https://play.google.com/"><div class="playstore"></div></a>
+        </div>
+        <div class="rightbox"></div>
+     </div>
+     <!-- --------------------fotter------------------ -->
+     <div class="fotter">
+        <div class="footerlogo" style="margin-top: 40px;"></div>
+        <p style="font-size: 16px ; margin-left: 90px; color: white; margin-top: 25px;">
+            MyTicket is a platform that helps you discover and buy the best in events, travel and food in your city. We strive to curate experiences that are worth your time and money,<br> possibly something you have never tried before.
+        </p>
+        <h5 class="eventheading">
+            For event organizers
+        </h5>
+        <p style="font-size: 16px ; margin-left: 90px; color: white; margin-top: 25px;">
+            Myticket is built by the same team that created Bacardi NH7 Weekender
+        </p>
+        <div class="socialmedia">
+            <p style="font-size: 18px ; margin-left: 90px; color: white; margin-top: 110px;">Find us on:</p>
+            <a href="https://www.facebook.com/">
+                <div class="fb" style="color: white;"></div></a>
+            <a href="https://twitter.com/i/flow/login?lang=en"><div class="twitter"></div></a>
+            <a href="https://www.instagram.com/"><div class="insta"></div></a>
+        </div>
+        <a href=""><div style="color:red; margin-left: 45%; font-weight: bold;">Back to top</div></a>
+     </div>
+    </div>
+  
+</body>
+
+
+<script>
+  const eventListings = [
+  {
+    title: "Music",
+    location: "Bengaluru",
+    date: "2023-08-22",
+    category: "music"
+  },
+  {
+    title: "Movie",
+    location: "hyderabad",
+    date: "2023-08-25",
+    category: "Movie"
+  },
+  {
+    title: "Theatre",
+    location: "mumbai",
+    date: "2023-08-25",
+    category: "Theatre"
+  },
+  // Add more event listings
+];
+
+const filterForm = document.getElementById("filter-form");
+const eventListingsContainer = document.getElementById("event-listings");
+
+filterForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const location = document.getElementById("location").value;
+  const date = document.getElementById("date").value;
+  const category = document.getElementById("category").value;
+
+  const filteredEvents = eventListings.filter(event => {
+    return (location === "" || event.location.toLowerCase().includes(location.toLowerCase())) &&
+           (date === "" || event.date === date) &&
+           (category === "all" || event.category === category);
+  });
+
+  displayEventListings(filteredEvents);
+});
+
+function displayEventListings(events) {
+  eventListingsContainer.innerHTML = "";
+
+  if (events.length === 0) {
+    eventListingsContainer.innerHTML = "<p>No events found.</p>";
+    return;
+  }
+
+  events.forEach(event => {
+    const eventDiv = document.createElement("div");
+    eventDiv.classList.add("event");
+
+    eventDiv.innerHTML = `
+      <h2>${event.title}</h2>
+      <p><strong>Location:</strong> ${event.location}</p>
+      <p><strong>Date:</strong> ${event.date}</p>
+      <p><strong>Category:</strong> ${event.category}</p>
+    `;
+
+    eventListingsContainer.appendChild(eventDiv);
+  });
+}
+
+
+</script>
+</html>
+
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Inter, sans-serif;
+}
+.container{
+    height:100%;
+    width: 100%;
+   
+}
+/* ----------Navbar---------- */
+.navbar{
+    height:100px;
+    width: 100%;
+    border-bottom: white;
+    background-color: #1d2f3e;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    font-family:Inter, sans-serif;
+    list-style: none;
+}
+.navbar ul li{
+    font-family:Inter, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size:23px;
+    font-family:Inter, sans-serif;
+    padding-top: 35px;
+}
+.navbar ul li:hover a{
+    
+    border-radius: 5px;
+    color: #b1caa8;
+}
+.navbar a .search:hover{
+    border-radius: 5px;
+    background-color: #b1caa8;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding-top: 80px;
+}
+img{
+    height: 60px;
+    width:70px ;
+    padding-bottom:70px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.search{
+    margin-top: -55px;
+    height: 50px;
+    width: 50px;
+    background-image: url(images/search\ \(2\).png);
+    background-size: 100% 100%;
+}
+
+
+/* -------------Search form------------ */
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+
+#filter-form {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 5%;
+    width: 100%;
+    height: 30vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#event-listings {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+label{
+    margin-left:10%;
+    font-size: 23px;
+}
+input{
+    padding: 10px;
+    border-radius: 7px;
+}
+select{
+    padding: 10px;
+    border-radius: 7px;
+}
+button{
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    width: 80px;
+    margin-left: 20px;
+    border: none;
+}
+
+
+
+.feature-eventbox{
+    height:87vh;
+    width: 100%;
+    margin-top:5vh;
+    position: relative;
+}
+.feature-eventbox h2{
+font-family:'korolev-condensed';
+padding-left: 45px;
+display: flex;
+padding-top: 10px;
+}
+.eventimg{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imgbox1{
+    height:300px;
+    width:250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(images/event1.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 10px  black ; 
+}
+.eventimg .imgbox1:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 7px grey;
+}
+.eventimg .imgbox2:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 7px grey;
+}
+.eventimg .imgbox3:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 7px grey;
+}
+.eventimg .imgbox4:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 7px grey;
+}
+.imgbox2{
+    height:300px;
+    width:250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(images/event2.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 10px  black ;
+}
+.imgbox3{
+    height:300px;
+    width:250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(images/event3.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 10px  black ;
+}
+.imgbox4{
+    height:300px;
+    width:250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(images/event4.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 10px  black ;
+}
+.imgbox1 button{
+    float: right;
+    font-size: 13px;
+    padding:5px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color:royalblue;
+    border-radius: 5px;
+    border: none;
+}
+.imgbox2 button{
+    float: right;
+    font-size: 13px;
+    padding:5px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: crimson;
+    border-radius: 5px;
+    border: none;
+}
+.imgbox3 button{
+    float: right;
+    font-size: 13px;
+    padding:5px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: crimson;
+    border-radius: 5px;
+    border: none;
+}
+.imgbox4 button{
+    float: right;
+    font-size: 13px;
+    padding:5px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color:crimson;
+    border-radius: 5px;
+    border: none;
+}
+span{
+    color: white;
+    font-weight: bold;
+}
+.calender{
+    height: 260px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.calender1{
+    height: 100px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.calender2{
+    height: 100px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.calender3{
+    height: 100px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.calender4{
+    height: 100px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.date{
+    
+    font: size 16px;
+    font-weight: bolder;
+    color: #45474D;
+}
+.venue{
+   
+    font: size 16px;
+    font-weight: bolder;
+    color: #45474D;  
+}
+.price{
+   
+    font: size 16px;
+    font-weight: bolder;
+    color: #45474D; 
+}
+.calender button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: royalblue;
+    border: none;
+    color: white;
+}
+.calender .calender1:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 5px grey;
+}
+.calender .calender2:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 5px grey;
+}
+.calender .calender3:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 5px grey;
+}
+.calender .calender4:hover{
+    border: 1px solid grey;
+    box-shadow: 2px 2px 15px 5px grey;
+}
+/* --------------contentbox------------- */
+.contentbox{
+    width: 80%;
+    height: 375px;
+    display: flex ;
+    padding: 60px;
+    border-radius: 15px;
+    background-color: #1d2f3e;
+    margin-left:10%;
+    overflow: hidden;
+}
+.leftbox{
+    height: 255px;
+    width:600px;
+
+}
+.leftbox h3{
+    font-family: 'korolev-condensed, sans-serif';
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    padding-left: 40px;
+    padding-top: 20px;
+    letter-spacing: 3px;
+}
+.playstore{
+    width: 140px;
+    height:50px;
+    margin-left: 40px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-image: url(images/google-play-badge.svg);
+    background-size: 100% 100%;
+}
+.rightbox{
+    height: 255px;
+    width: 255px;
+    background-image: url(/images/findvibe.png);
+    background-size: 100% 100%;
+}
+/* ----------------------footer----------------------- */
+.fotter{
+    width: 100%;
+    height: 370px;
+    background-color:#1d2f3e ;
+    margin-top: 30px;
+}
+.footerlogo{
+    width: 125px;
+    height: 33px;
+    background-image: url(images/logo.png);
+    background-size: 100% 100%;
+    margin-left:90px;
+    padding-top:50px;
+    margin-top: 100px;
+}
+.eventheading{
+        color: white;
+        font-size: 21px;
+        font-family:' korolev-condensed,sans-serif';
+        font-weight: 700;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-left: 90px;
+        margin-top: 30px;
+}
+.socialmedia{
+    display: flex;
+}
+.fb{
+    height: 39px;
+    width: 39px;
+    background-image: url(images/facebook-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+.twitter{
+    height: 41px;
+    width: 41px;
+    background-image: url(images/twitter-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+.insta{
+    height: 41px;
+    width: 45px;
+    background-image: url(images/instagram-removebg-preview.png);
+    background-size: 100% 100%;
+    margin: 20px;
+}
+</style>
